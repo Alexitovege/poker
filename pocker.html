@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Texas Hold'em Poker</title>
+    <link rel="stylesheet" href="../css/pocker.css">
+    <script type="text/javascript" src="../js/poker.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="blackjack.html">Blackjack</a></li>
+                <li><a href="dados.html">Dados</a></li>
+                <li><a href="ruleta.html">Ruleta</a></li>
+            </ul>
+        </nav>
+        <h1>Texas Hold'em Poker</h1>
+        <div class="main-container">
+            <div class="left-column">
+                <h2>Orden de Jugadas</h2>
+                <ul>
+                    <li>Escalera Real "10 J Q K A"</li>
+                    <li>Escalera de Color</li>
+                    <li>Póker "4 Cartas iguales"</li>
+                    <li>Full House "3 cartas iguales y luego dos iguales"</li>
+                    <li>Color "Todas las cartas del mismo color"</li>
+                    <li>Escalera</li>
+                    <li>Trío "Tres cartas iguales"</li>
+                    <li>Doble Pareja</li>
+                    <li>Pareja</li>
+                    <li>Carta Alta</li>
+                </ul>
+            </div>
+            <div class="center-column">
+                <div class="cards">
+                    <div id="communityCards">Cartas Comunes: </div>
+                </div>
+                <div class="buttons">
+                    <button id="dealButton">Repartir Cartas</button>
+                    <button id="flopButton">Mostrar Flop</button>
+                    <button id="turnButton">Mostrar Turn</button>
+                    <button id="riverButton">Mostrar River</button>
+                    <button id="betButton">Apostar</button>
+                    <button id="raiseButton">Subir Apuesta</button>
+                    <button id="nextRoundButton">Determinar Ganador</button>
+                    <button id="resetButton">Reiniciar Partida</button>
+                    <button id="continueButton" class="hidden">Seguir Jugando</button>
+                </div>
+                <div class="info">
+                    <div id="playerMoney">Dinero del jugador: $1000</div>
+                    <div id="pot">Bote: $0</div>
+                    <div id="message"></div>
+                </div>
+                <div>
+                    <input type="number" id="betAmount" placeholder="Cantidad a apostar">
+                </div>
+            </div>
+            <div class="right-column">
+                <h2>Cartas de los Jugadores</h2>
+                <div id="playerCards">Tus cartas: </div>
+                <div id="bot1Cards" class="hidden">Cartas del Bot 1: </div>
+                <div id="bot2Cards" class="hidden">Cartas del Bot 2: </div>
+                <div id="bot3Cards" class="hidden">Cartas del Bot 3: </div>
+            </div>
+        </div>
+        <div id="moneyList"></div>
+    </div>
+</body>
+</html>

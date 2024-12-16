@@ -1,0 +1,232 @@
+html{
+    overflow-x: hidden; /* Evita el desplazamiento en horizontal */
+}
+
+@font-face{
+    font-family: "Casino";
+    src: url("../media/Casino.TTF");
+} 
+
+body {
+    background-image: url('../media/fondo2.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+    font-family: 'Casino';
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Asegura que el contenido ocupe toda la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor envolvente */
+.wrapper {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto; /* Permite desplazamiento vertical */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Menú de navegación */
+nav {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Asegura que el menú se mantenga encima */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffd700; /* Dorado */
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 20px 0;
+    color: #ffd700; /* Dorado */
+    text-shadow: 2px 2px 4px #000;
+}
+
+/* Contenedor principal */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80%;
+    padding: 0 10px; /* Espacio entre columnas */
+    margin-top: 60px; /* Espacio para el menú fijo */
+}
+
+/* Columna izquierda */
+.left-column {
+    width: 15%; /* Más fina */
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    text-align: left;
+}
+
+.left-column h2 {
+    color: #ffd700; /* Dorado */
+}
+
+.left-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.left-column li {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* Columna central */
+.center-column {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+#communityCards {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.buttons {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+button {
+    background-color: #ffd700; /* Dorado */
+    border: none;
+    color: #000;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ffa500; /* Naranja */
+}
+
+.info {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+#playerMoney, #pot, #message {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+/* Columna derecha */
+.right-column {
+    width: 15%; /* Más fina */
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    text-align: left;
+}
+
+.right-column h2 {
+    color: #ffd700; /* Dorado */
+}
+
+#playerCards, #bot1Cards, #bot2Cards, #bot3Cards {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+/* Lista de dinero */
+#moneyList {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    width: 100%;
+    color: #ffd700; /* Dorado */
+    text-align: left;
+}
+
+#moneyList ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#moneyList li {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+/* Input de apuesta */
+input[type="number"] {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ffd700; /* Dorado */
+    font-size: 1em;
+    width: calc(100% - 24px);
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo similar al resto */
+    color: #fff; /* Texto blanco */
+}
